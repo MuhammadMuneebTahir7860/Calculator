@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="calculator">
+            <p id="output"></p><hr>
+            <button class="btn btn-light empty" onclick="clearResult()">C</button>
+            <button class="btn btn-light operator" onclick="input('%')">%</button>
+            <button class="btn btn-light empty" onclick="clearResult()">CE</button>
+            <button class="btn btn-success operator" onclick="input('/')">/</button><br>
+            <button class="number" onclick="input('7')">7</button>
+            <button class="number" onclick="input('8')">8</button>
+            <button class="number" onclick="input('9')">9</button>
+            <button class="operator btn btn-warning" onclick="input('*')">X</button><br>
+            <button class="number" onclick="input('4')">4</button>
+            <button class="number" onclick="input('5')">5</button>
+            <button class="number" onclick="input('6')">6</button>
+            <button class="btn btn-danger operator" onclick="input('-')">-</button><br>
+            <button class="number" onclick="input('1')">1</button>
+            <button class="number" onclick="input('2')">2</button>
+            <button class="number" onclick="input('3')">3</button>
+            <button class="operator btn btn-primary" onclick="input('+')">+</button><br>
+            <button class="number" onclick="input('00')">00</button>
+            <button class="number" onclick="input('0')">0</button>
+            <button class="number" onclick="input('.')">.</button>
+            <button class="operator btn btn-secondary" onclick="calculate()">=</button>
+
+        </div>
+       
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
