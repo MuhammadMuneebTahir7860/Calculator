@@ -5,7 +5,13 @@ zero();
 function input(num1,opr,num2){
     removeZero();
     var output=document.getElementById("output").innerHTML;
-    document.getElementById("output").innerHTML=output + num1,opr,num2;
+    if(output==0 || output=="+" || output=="-" || output=="*" || output=="/" || output=="%"){
+        document.getElementById("output").innerHTML=num1,opr,num2;
+    }
+    else{
+        document.getElementById("output").innerHTML=output + num1,opr,num2;
+    }
+   
 }
 function clearResult(){
     var clear=document.getElementById("output");

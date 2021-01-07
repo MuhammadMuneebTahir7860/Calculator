@@ -13,7 +13,8 @@
 <body>
     <div id="main-container">
         <div id="calculator">
-            <p id="output"></p><hr>
+            <p id="output"></p>
+            <p id="second"></p><hr>
             <button class="btn btn-light empty" onclick="clearResult()">C</button>
             <button class="btn btn-light operator" onclick="input('%')">%</button>
             <button class="btn btn-light empty" onclick="clearResult()">CE</button>
@@ -30,7 +31,7 @@
             <button class="number" onclick="input('2')">2</button>
             <button class="number" onclick="input('3')">3</button>
             <button class="operator btn btn-primary" onclick="input('+')">+</button><br>
-            <button class="number" onclick="input('00')">00</button>
+            <button class="number" onclick="input('0')">00</button>
             <button class="number" onclick="input('0')">0</button>
             <button class="number" onclick="input('.')">.</button>
             <button class="operator btn btn-secondary" onclick="calculate()">=</button>
