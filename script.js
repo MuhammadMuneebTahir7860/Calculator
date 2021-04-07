@@ -17,16 +17,35 @@ function input(num){
                    output.innerHTML+=num;
                    if(isNaN(num)    &&  isNaN(output.innerHTML.charAt(output.innerHTML.length-2))){
                        output.innerHTML=output.innerHTML.substring(0,output.innerHTML.length-2) +
-                       output.innerHTML.substring(output.innerHTML.length-1,output.innerHTML.length)
-                   }
-               }
-
+                       output.innerHTML.substring(output.innerHTML.length-1,output.innerHTML.length);
+                    }
+                }    
     }
    
 }
 function clearResult(){
     var clear=document.getElementById("output");
     clear.innerHTML= "0";
+    document.getElementById("second").innerHTML="";
+
+}
+const clearOne = () =>{
+    var recent=document.getElementById("output");
+    if(recent.innerHTML.length>1){
+    recent.innerHTML=recent.innerHTML.slice(0,recent.innerHTML.length-1);}
+    else{recent.innerHTML=0;}
+    var result = document.getElementById("output").innerHTML;  
+    var second=document.getElementById("second");
+    if(isNaN(result.charAt(result.length-1))){
+        var lastCharNAN=result.substring(0,result.length-1);
+        second.innerHTML=eval(lastCharNAN);
+    }
+    else{
+        second.innerHTML=eval(result);
+    }
+    if(recent.innerHTML==0  || recent.innerHTML=="-"){
+        second.innerHTML="";
+    }
 }
 function removeZero() {
     var value = document.getElementById("output").innerHTML;
@@ -36,13 +55,13 @@ function removeZero() {
     }
 }
 function calculate() {
-    var result = document.getElementById("output").innerHTML;  
-    var second=document.getElementById("second")
+    var result = document.getElementById("output").innerHTML; 
+    var second=document.getElementById("second");
     if(isNaN(result.charAt(result.length-1))){
         var lastCharNAN=result.substring(0,result.length-1);
         second.innerHTML=eval(lastCharNAN);
     }
     else{
         second.innerHTML=eval(result);
-    }
+        }
 }
