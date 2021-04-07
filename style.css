@@ -4,7 +4,7 @@ body{
 }
 #calculator{
     width: 320px;
-	height: 520px;
+	height: 560px;
 	background-color: #eaedef;
 	margin: 0 auto;
 	top: 20px;
@@ -28,6 +28,14 @@ body{
 	height: 60px;
 	margin: 10px 20px;
 	font-size: 30px;
+    font-weight: bold;
+}
+#second{
+    text-align: right;
+    height: 40px;
+    margin: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
 }
 .operator, .number, .empty{
 	width: 50px;
